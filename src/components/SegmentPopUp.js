@@ -2,9 +2,10 @@ import React,{useState} from 'react';
 import '../App.css';
 import Header from "./Header";
 import Traits from './Traits';
+import BlueBox from './BlueBox';
 
 
-const SegmentPopUp = () => {
+const SegmentPopUp = (props) => {
 
 const[inputData,setInputData] = useState("");
 
@@ -28,12 +29,12 @@ const[inputData,setInputData] = useState("");
 
     <Traits/>
 
-    <div>
-        BlueBox
-    </div>
-    <div>
+    <BlueBox/>
+    {/* <div>
         Add New Schema
-    </div>
+    </div> */}
+
+    <br></br>
     <button>Save Segment</button>
     </>
   )

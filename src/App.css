@@ -103,3 +103,26 @@
         /* background-color: $group-traits-color;
         margin-right: 5px; */
     }
+
+
+    /* Segment PopUp */
+
+    .segment-popup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50%; /* Adjust width as needed */
+      height: 100%;
+      background-color: white;
+      z-index: 9999; /* Ensure the popup is on top of other elements */
+      overflow-y: auto; /* Allow scrolling if content exceeds viewport height */
+      padding: 20px; /* Add padding for content */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for visual effect */
+    }
+    
+    .segment-popup .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
