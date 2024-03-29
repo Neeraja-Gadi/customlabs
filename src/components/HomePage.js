@@ -11,13 +11,21 @@ const HomePage = () => {
         // console.log(isPopup)
   }
 
-  return (
-    <div className='homepage'>
+  const OnClickCloseSegment = ()=>{
+    setIsPopUP(false)
+  }
 
-       <Header textDisplay= "View Segment"/>
+  return (
+    <div className="homepage">
+
+       <Header textDisplay= "View Segment"  />
+
+       <div>
+        <p>Assignment for CustomLabs</p>
+       </div>
        
       <button className='Show-segment-button' onClick={OnClickShowSegment}>Show segment</button>
-      {isPopup && <SegmentPopUp />}
+      {isPopup && <SegmentPopUp onClose={OnClickCloseSegment} />}
 
     </div>
   )

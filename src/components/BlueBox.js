@@ -11,13 +11,13 @@ const BlueBoxStyle = {
 
 const BlueBox = () => {
     const [schemaArray,setSchemaArray] =React.useState( [
-        { label: "First Name", value: "first_name",selected:false },
-        { label: "Last Name", value: "last_name",selected:false },
-        { label: "Gender", value: "gender",selected:false },
-        { label: "Age", value: "age",selected:false },
-        { label: "Account Name", value: "account_name",selected:false },
-        { label: "City", value: "city" ,selected:false},
-        { label: "State", value: "state",selected:false }
+        { label: "First Name", value: "first_name",selected:false , trait : "user" },
+        { label: "Last Name", value: "last_name",selected:false,trait : "user" },
+        { label: "Gender", value: "gender",selected:false ,trait : "user"},
+        { label: "Age", value: "age",selected:false,trait : "user" },
+        { label: "Account Name", value: "account_name",selected:false,trait : "group" },
+        { label: "City", value: "city" ,selected:false,trait : "group"},
+        { label: "State", value: "state",selected:false,trait : "group" }
     ])
 
     const [selector,setSelector]=React.useState(null)
@@ -45,37 +45,36 @@ const BlueBox = () => {
         setSchemaArray(temp)
         setSelector(null)
     }
+
+    function handleRemoveSchema(index) {
+        const updatedSchemaArray = [...schemaArray];
+        updatedSchemaArray[index].selected = false;
+        setSchemaArray(updatedSchemaArray);
+    }
     return (
         <>
             <div className='Blue-box' >
 
-                <div className="dropdown" style={BlueBoxStyle}>
-                    <div>
-                    {
-                        schemaArray?.map((sc,i)=>( 
-                            sc.selected == true?
-                            <select id="schema-dropdown" style={{ "width": "25rem", "height": "2rem" }}
-                                onChange={(event)=>handleChangeOption(event,i)}
-                            >
-                               <option value="" disabled selected hidden>{sc.label}</option>
-                                { schemaArray.map((schema,key)=>(
-                                        schema.selected == false?
-                                            <option value={key} >{schema.label}</option>
+            <div className="dropdown" style={BlueBoxStyle}>
+                    {schemaArray?.map((sc, i) => (
+                        sc.selected ?
+                            <div key={i} className="dropBox">
+                                 <span className='user-traits-bullet'  style={{ backgroundColor: 'green' }}></span>
+                                <select key={i} id={`schema-dropdown-${i}`} style={{ "width": "25rem", "height": "2rem" }}
+                                    onChange={(event) => handleChangeOption(event, i)}>
+                                    <option value="" disabled selected hidden>{sc.label}</option>
+                                    {schemaArray.map((schema, key) => (
+                                        !schema.selected ?
+                                            <option key={key} value={key}>{schema.label}</option>
                                             :
-                                            null        
-                                    
-                                )
-                                )}
-                                
-                            </select>:null
-                             
-                           
-                            
-                        )
-                        )
-                    }
-                   
-                    </div>
+                                            null
+                                    ))}
+                                </select>
+                                <FaMinus key={`icon-${i}`} onClick={() => handleRemoveSchema(i)}/>
+                            </div>
+                            : null
+                    ))}
+                </div>
                    
                 </div>
 
@@ -97,7 +96,6 @@ const BlueBox = () => {
                 </div>
 
                 <a href="#" onClick={()=>handleAddSchema(selector)} className="add-schema-link">+ Add new schema</a>
-            </div>
         </>
     )
 }
