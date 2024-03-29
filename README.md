@@ -7,7 +7,7 @@ This project implements a segment creation page using ReactJS. It allows users t
 https://schema-creator-rgpq896s4-neeraja-gadis-projects.vercel.app/
 
 
-## Setup
+## 3. Setup
 
    
  1.  git clone 'https://github.com/Neeraja-Gadi/customlabs.git'
@@ -19,7 +19,7 @@ https://schema-creator-rgpq896s4-neeraja-gadis-projects.vercel.app/
  4. npm start 
 
 
-## 3. Usage : 
+## 4. Usage : 
 ### (i). Segment Creation Page:
 
 Navigate to the segment creation page after starting the development server. You will see a button labeled "Save segment".
@@ -49,7 +49,7 @@ After adding a new dropdown to the blue box, the "Add schema to segment" dropdow
 Click on the "Save the segment" button to send segment data to the server.
 
 
-## 4. Server Communication 
+## 5. Server Communication 
 When the user clicks on "Save the segment", the segment data is sent to the server in the following format:
 
 ```json
@@ -64,7 +64,7 @@ When the user clicks on "Save the segment", the segment data is sent to the serv
 
 ```
 
-## 5. Technologies Used
+## 6. Technologies Used
 
 ReactJS
 
