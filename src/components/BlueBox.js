@@ -93,7 +93,7 @@ const BlueBox = (props) => {
                             <select key={i}  id={`schema-dropdown-${i}`} style={{ width: "25rem", height: "2rem", }}
                                 onChange={(event)=>handleChangeOption(event,i)}
                             >
-                                <option value="" >{sc.label}</option>
+                                <option value="" disabled selected hidden >{sc.label}</option>
                                 {schemaArray.map((schema, key) => (
                                     !schema.selected ?
                                         <option key={key} value={key} >{schema.label}</option>
