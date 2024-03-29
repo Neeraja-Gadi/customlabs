@@ -45,7 +45,7 @@ const SegmentPopUp = (props) => {
                         </div>
 
                     </div>
-
+ 
                     <div>
                         < Footer segmentName={inputData} onClose={props.onClose} blueBoxData={BlueBoxData}/>
                     </div>
