@@ -21,7 +21,7 @@ const Footer = (props) => {
 
 
 
-    const handleSave = () => {
+    const handleSaveSegment = () => {
 
         if (!segmentName || schemaData.length < 1) {
             alert('Please Fill Segment')
@@ -46,7 +46,7 @@ const Footer = (props) => {
     return (
         <>
             <div className='segment-footer'>
-                <button className='segment-save-button' onClick={handleSave}>Save Segment</button>
+                <button className='segment-save-button' onClick={handleSaveSegment}>Save Segment</button>
                 <button className='segment-close-button' onClick={props.onClose}>Cancel</button>
             </div>
         </>
