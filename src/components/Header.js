@@ -5,15 +5,13 @@ const headerStyle = {
     "display": "flex",
     "padding": "5px" ,
     "border" : "5px",
-    "background-color": "#008080",
+    "background-color":  "#0baeae",
     "color" : "white",
     "font-size": "12px",
     "font-weight": 400,
      "alignItems": "center",  
     
 }
-
-
 
 const Header = (props) => {
   return (
