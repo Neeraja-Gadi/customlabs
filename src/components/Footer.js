@@ -33,12 +33,13 @@ const Footer = (props) => {
             }
         })
             .then((response) => {
-                console.info(response.data, "rrr")
+                props.onClose()
             }).catch((err) => {
                 console.error(err)
+                props.onClose()
             })
 
-        props.onClose()
+
     }
 
 

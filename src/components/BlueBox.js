@@ -93,7 +93,7 @@ const BlueBox = (props) => {
                             <select key={i}  id={`schema-dropdown-${i}`} style={{ width: "25rem", height: "2rem", }}
                                 onChange={(event)=>handleChangeOption(event,i)}
                             >
-                                <option value="" disabled selected hidden >{sc.label}</option>
+                                <option value=""  selected hidden >{sc.label}</option>
                                 {schemaArray.map((schema, key) => (
                                     !schema.selected ?
                                         <option key={key} value={key} >{schema.label}</option>
@@ -110,7 +110,6 @@ const BlueBox = (props) => {
             </div>
 
 
-            <br></br>
 
             <div className='add-schema-to-segment-box'>
                 <GoDotFill style={{ color: "gray" }} />
@@ -118,15 +117,15 @@ const BlueBox = (props) => {
                     onChange={handleChange}
 
                 >
-                    <option value="" style={{width:"10px"}} disabled selected hidden>Add schema to segment</option>
+                    <option value="" style={{width:"10px"}}  selected hidden>Add schema to segment</option>
                     {schemaArray.map((schema, key) => (
                         schema.selected == false ?
                             <option key={"select" + key} value={key}  >{schema.label} </option>
-                            : <option value="" disabled selected hidden>Add schema to segment</option>
+                            : <option value=""  selected hidden>Add schema to segment</option>
                     ))}
                 </select>
             </div>
-            <br></br>
+
 
             <a href="#" onClick={() => handleAddSchema(selector)} className="add-schema-link">+ Add new schema</a>
         </>

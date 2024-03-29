@@ -128,8 +128,9 @@
 }
 
 .add-schema-link{
-  padding: 5px;
-  font-size: 14px;
+  padding: 0px 15px;
+  font-size: 15px;
+  font-weight: bold;
   color:#0baeae ;
 }
 
@@ -140,7 +141,7 @@
   display: flex;
   bottom: 0px;
   width: 100%;
-  background-color: #bcbfc0;
+  background-color: #d5d3d3;
   padding: 10px;
   text-align: center;
 }

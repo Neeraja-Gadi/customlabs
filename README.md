@@ -47,7 +47,7 @@ Click on the "Save the segment" button to send segment data to the server.
 <!-- Server Communication -->
 When the user clicks on "Save the segment", the segment data is sent to the server in the following format:
 json
-Copy code
+
 { 
     "segment_name": "last_10_days_blog_visits", 
     "schema": [ 

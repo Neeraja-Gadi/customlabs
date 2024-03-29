@@ -37,7 +37,6 @@ const SegmentPopUp = (props) => {
                             />
                         </div>
                         <p style={{ fontWeight: "normal", fontSize: "16px",margin:'10px' }}>To save your segment, you need to add the schemas to build the query </p> 
-                        <br></br>
                         <div className='traits-wrapper'>
                             <Traits />
                         </div>
