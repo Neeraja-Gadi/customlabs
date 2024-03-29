@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# ReactJS Segment Creation Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project implements a segment creation page using ReactJS. It allows users to create segments with custom names and associated schemas. The application provides a user-friendly interface with features such as dynamic addition of schemas and sending segment data to the server.
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+   
+ 1.  git clone 'https://github.com/Neeraja-Gadi/customlabs.git'
 
-### `npm start`
+ 2. cd <Directory name>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ 3. npm  i
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ 4. npm start 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Usage : 
+Segment Creation Page:
 
-### `npm run build`
+Navigate to the segment creation page after starting the development server. You will see a button labeled "Save segment".
+Creating a Segment:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Click on the "Save segment" button to open a popup. Enter the segment name in the text box provided.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Adding Schemas:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In the popup, select the desired schema from the "Add schema to segment" dropdown.
 
-### `npm run eject`
+Adding a New Schema:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Click on the "+Add new schema" link to add a new dropdown to the blue box.
+Changing New Dropdown:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Newly added dropdowns in the blue box can be changed by selecting different options.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Resetting Schema Dropdown:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+After adding a new dropdown to the blue box, the "Add schema to segment" dropdown will reset with unselected options.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Saving the Segment:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Click on the "Save the segment" button to send segment data to the server.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- Server Communication -->
+When the user clicks on "Save the segment", the segment data is sent to the server in the following format:
+json
+Copy code
+{ 
+    "segment_name": "last_10_days_blog_visits", 
+    "schema": [ 
+        {"first_name": "First name"}, 
+        {"last_name": "Last name"} 
+    ] 
+}
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+<!-- Technologies Used -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ReactJS
+HTML/CSS
+JavaScript
